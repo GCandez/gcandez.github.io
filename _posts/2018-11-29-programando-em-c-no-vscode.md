@@ -30,10 +30,10 @@ Caso seu sistema seja 32 bits, baixe o arquivo `msys2-i686`, ou `msys2-x86_64`.
     ![](/assets/msys2_install_1.png)
 4. Selecione o local onde serão instalados os arquivos. Nesse exemplo usaremos o padrão que é `C:\msys64` (para a versão 32 bits o padrão é `C:\msys32`), porém você pode escolher outro local
 
-    ![](/assets/msys2_install_2.PNG)
+    ![](/assets/msys2_install_2.png)
 5. Após terminar a instalação, clique em **Finish**
 
-    ![](/assets/msys2_install_3.PNG)
+    ![](/assets/msys2_install_3.png)
 
 Foram adicionados ao **Menu Inicial** 3 novos atalhos:
 
