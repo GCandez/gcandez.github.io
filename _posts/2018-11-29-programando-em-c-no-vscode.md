@@ -17,7 +17,7 @@ O **MSYS 2** é uma distribuição de ferramentas e plataforma de compilação p
 
 O **MSYS2** conta com um simples instalador que pode ser encontrado no [site oficial](http://www.msys2.org/).
 
-![Site do MSYS2](/assets/msys2_website.png)
+![Site do MSYS2](/assets/programando-em-c-no-vscode/msys2_website.png)
 
 Caso seu sistema seja 32 bits, baixe o arquivo `msys2-i686`, ou `msys2-x86_64`.
 
@@ -27,13 +27,13 @@ Caso seu sistema seja 32 bits, baixe o arquivo `msys2-i686`, ou `msys2-x86_64`.
 2. Execute o instalador
 3. Clique em **Next**
     
-    ![](/assets/msys2_install_1.png)
+    ![](/assets/programando-em-c-no-vscode/msys2_install_1.png)
 4. Selecione o local onde serão instalados os arquivos. Nesse exemplo usaremos o padrão que é `C:\msys64` (para a versão 32 bits o padrão é `C:\msys32`), porém você pode escolher outro local
 
-    ![](/assets/msys2_install_2.png)
+    ![](/assets/programando-em-c-no-vscode/msys2_install_2.png)
 5. Após terminar a instalação, clique em **Finish**
 
-    ![](/assets/msys2_install_3.png)
+    ![](/assets/programando-em-c-no-vscode/msys2_install_3.png)
 
 Foram adicionados ao **Menu Inicial** 3 novos atalhos:
 
@@ -49,16 +49,16 @@ Antes de adicionarmos o **gcc**, precisamos atualizar nosssa instalação do **M
 
 1. Abra o terminal `MSYS`
 
-    ![](/assets/msys2_update_1.png)
+    ![](/assets/programando-em-c-no-vscode/msys2_update_1.png)
 2. Digite `pacman -Syuu` e responda `Y` quando perguntado se deseja prosseguir com a instalação.
 
-    ![](/assets/msys2_update_2.png)
+    ![](/assets/programando-em-c-no-vscode/msys2_update_2.png)
 
-    ![](/assets/msys2_update_3.png)
+    ![](/assets/programando-em-c-no-vscode/msys2_update_3.png)
 
 3. Reinicie o terminal e execute novamente o comando do passo anterior. Repita esse passo (reiniciando o terminal cada vez) até que tudo tenha sido atualizado.
     
-    ![](/assets/msys2_update_4.png)
+    ![](/assets/programando-em-c-no-vscode/msys2_update_4.png)
 
 
 ### Passo 3: Instalando o GCC ###
@@ -68,38 +68,38 @@ Antes de adicionarmos o **gcc**, precisamos atualizar nosssa instalação do **M
     * Para 32 bits: `pacboy sync mingw-w64-i686-gcc`
     * Para 64 bits: `pacboy sync mingw-w64-x86_64-gcc`
 
-    ![](/assets/msys2_gcc_1.png)
+    ![](/assets/programando-em-c-no-vscode/msys2_gcc_1.png)
 3. Instale também o **gdb**, que é utilizado para debugar:
     * Para 32 bits: `pacboy sync mingw-w64-i686-gdb`
     * Para 64 bits: `pacboy sync mingw-w64-x86_64-gdb`
 
-    ![](/assets/msys2_gcc_2.png)
+    ![](/assets/programando-em-c-no-vscode/msys2_gcc_2.png)
 4. Verifique se o *gcc* e *gdb* foram instalador com sucesso. Para isso abra o terminal `MSYS2 MinGW` (32 ou 64 bits, abra o referente à do gcc que você instalou).
     * Verifique o *gcc*: `gcc --version`
     * Verifque o *gdb*: `gdb --version`
 
-    ![](/assets/msys2_gcc_3.png)
+    ![](/assets/programando-em-c-no-vscode/msys2_gcc_3.png)
 
 Por útlimo, iremos adicionar o diretório contendo os executáveis do **gcc** e do **gdb** na variável `PATH` do sistema. Isso permite que você execute o comando **gcc** ou **gdb** no terminal do windows, em qualquer diretório.
 
 1. Vá nas propriedades de `Meu Computador`, clique em `Configurações avançadas do sitema`, vá na aba `Avançado` e clique em `Variáveis de Ambinete`
 
-    ![](/assets/path_1.png)
+    ![](/assets/programando-em-c-no-vscode/path_1.png)
 2. Na lista que apareceu, selecione a variável `Path` clique em `Editar`
 
-    ![](/assets/path_2.png)
+    ![](/assets/programando-em-c-no-vscode/path_2.png)
 
 3. Clique em `Novo` e adicione:
     * Caso tenha instalado o **GCC 32bits**: `C:\msys64\mingw32\bin`
     * Caso tenha instalado o **GCC 64bits**: `C:\msys64\mingw64\bin`
     * Caso não tenha instalado o **MSYS2** no diretório padrão não tem problema! Por exemplo, caso tenha instalado em `D:\msys`, o caminho para o **GCC 32bits** seria `D:\msys\mingw32\bin` e para o **GCC 64bits** seria `D:\msys\mingw64\bin`
 
-    ![](/assets/path_3.png)
+    ![](/assets/programando-em-c-no-vscode/path_3.png)
 4. Feche as janelas clicando em `OK`.
 5. Abra um novo terminal do windows (<kbd>Windows</kbd>+<kbd>R</kbd> e digite `cmd`)
 6. Verifique se consegue executar os comandos `gcc --version` e `gdb --version`.
     
-    ![](/assets/path_4.png)
+    ![](/assets/programando-em-c-no-vscode/path_4.png)
     * Caso não consiga executar os comandos, reinicie seu computador.
     * Se mesmo após reiniciar não consegue executar os comandos, certifique-se que adicionou os caminhos corretos no passo **3**
 
@@ -112,12 +112,12 @@ O Visual Studio Code (VS Code) é um excelente editor de código que possuí div
 
 Para instalar o VS Code, baixe o instalador no [site oficial](https://code.visualstudio.com/).
 
-![Site oficial do VS Code](/assets/vscode_website.png)
+![Site oficial do VS Code](/assets/programando-em-c-no-vscode/vscode_website.png)
 
 ## Passo 2: Instalando a extensão C\C++ ##
 Após instalar o VS Code, clique no botão de extensões e adicione a extensão `C\C++`
 
-![](/assets/cpp_extension.jpg)
+![](/assets/programando-em-c-no-vscode/cpp_extension.jpg)
 
 Reinicie o VS Code.
 
@@ -150,7 +150,7 @@ Primeiro precisamos configurar a extensão `C\C++` para o nosso projeto.
 
 Agora com a extensão configurada, crie um arquivo com extensão `.c`, e nele escreveremos nosso código.
 
-![](/assets/vscode_1.png)
+![](/assets/programando-em-c-no-vscode/vscode_1.png)
 
 Agora, precisaremos configurar uma tarefa (task) para compilar nosso código.
 
